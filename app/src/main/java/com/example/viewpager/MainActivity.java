@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity
     BlankFragment3 blankFragment3;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity
         blankFragment2=new BlankFragment2();
         blankFragment3=new BlankFragment3();
 
-        MyPagerAdapter myPagerAdapter=new MyPagerAdapter(getSupportFragmentManager());
+        MyPagerAdapter myPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
         tabLayout.setupWithViewPager(viewPager);
         viewPager.setAdapter(myPagerAdapter);
 
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity
 
     class MyPagerAdapter extends FragmentPagerAdapter
     {
-        String fragmentname[]={"First","Second","Third"};
+        String[] fragmentname={"First","Second","Third"};
 
         public MyPagerAdapter( FragmentManager fm) {
             super(fm);

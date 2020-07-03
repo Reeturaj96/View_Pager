@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
             app:tabIndicatorColor="@color/white"
-            app:tabTextColor="@color/lightgray"
+            app:tabTextColor="@android:color/darker_gray"
             app:tabSelectedTextColor="@color/white"
             app:tabRippleColor="@color/colorPrimaryDark">
         </com.google.android.material.tabs.TabLayout>

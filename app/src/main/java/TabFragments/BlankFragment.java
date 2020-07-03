@@ -10,9 +10,7 @@ import android.view.ViewGroup;
 
 import com.example.viewpager.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class BlankFragment extends Fragment {
 
     public BlankFragment() {
