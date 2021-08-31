@@ -4,9 +4,6 @@ import android.os.Bundle;
 import com.google.android.material.tabs.TabLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import TabFragments.BlankFragment;
 import TabFragments.BlankFragment2;
@@ -36,46 +33,11 @@ public class MainActivity extends AppCompatActivity
         blankFragment2=new BlankFragment2();
         blankFragment3=new BlankFragment3();
 
-        MyPagerAdapter myPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
+        MyPagerAdapter myPagerAdapter = new MyPagerAdapter(this, getSupportFragmentManager());
         tabLayout.setupWithViewPager(viewPager);
         viewPager.setAdapter(myPagerAdapter);
 
 
     }
 
-    class MyPagerAdapter extends FragmentPagerAdapter
-    {
-        String[] fragmentname={"First","Second","Third"};
-
-        public MyPagerAdapter( FragmentManager fm) {
-            super(fm);
-        }
-
-
-        @Override
-        public Fragment getItem(int position)
-        {
-            switch (position)
-            {
-                case 0:
-                    return blankFragment;
-                case 1:
-                    return blankFragment2;
-                case 2:
-                    return blankFragment3;
-            }
-            return null;
-        }
-
-        @Override
-        public int getCount()
-        {
-            return fragmentname.length;
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return fragmentname[position];
-        }
-    }
 }
